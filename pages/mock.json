@@ -1,0 +1,26 @@
+{
+5: {
+project_name: "Lambhate Residency",
+project_location: "HIRANANDANI MEADOWS, THANE",
+project_type: "INTERIOR + RESIDENTIAL",
+project_stats: "Under Construction",
+project_area: "222",
+project_info: "s",
+detail_images: [ ],
+thumbnailImages: [ ]
+},
+6: {
+project_name: "Lambhate Residency",
+project_location: "HIRANANDANI MEADOWS, THANE",
+project_type: "INTERIOR + RESIDENTIAL",
+project_stats: "Under Construction",
+project_area: "222",
+project_info: "fghjf",
+detail_images: [
+"https://aradesign.in/ara-admin/upload_images/6/0.jpg"
+],
+thumbnailImages: [
+"https://aradesign.in/ara-admin/upload_big_images/6/0.jpg"
+]
+}
+}

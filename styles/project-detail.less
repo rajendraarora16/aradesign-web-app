@@ -1,0 +1,289 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import './common.less';
+
+  .main-container {
+    height: 100vh;
+    position: relative;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 15px;
+    .row {
+      width:100%;
+      .container {
+        width:100%;
+        
+        .grid {
+          display: flex;
+          .column {
+            &.column-right {
+              margin-left:auto;
+              .menu {
+                img {
+                  width:25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .super-container {
+      .row {
+        .container {
+          &.project-details {
+              padding: 0;
+            .grid {
+              height: 70vh;
+              align-items: top;
+              @media only screen and (max-width: 768px) {
+                display: block;
+              }
+            }
+            .slick-dots li, .slick-dots li button{
+              cursor: url(https://aradesign.in/content/common/gray-cursor.png) 10 8, default;
+            }
+            .column-left {
+              width: 65%;
+              @media only screen and (max-width: 768px) {
+                width: 100%;
+              }
+              img {
+                width: 100%;
+              }
+              .slick-dots {
+                bottom: 0;
+                margin-bottom: 10px;
+                text-align: left;
+                li {
+                  button {
+                    margin-right: 0px;
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 16px solid #4d4d4d;
+                    transition: all 0.5s ease-in-out;
+                    border-radius: 2px;
+                    padding: 0;
+                    &:hover,  {
+                      border-bottom: 16px solid #fff;
+                    }
+                    &::before {
+                      width: 0;
+                      color: transparent;
+                    }
+                  }
+                  &.slick-active {
+                    button {
+                      border-bottom: 16px solid #fff;
+                    }
+                  }
+                }
+              } 
+            }
+            .column-right {
+              width: 32%;
+              @media only screen and (max-width: 768px) {
+                width: 100%;
+              }
+            }
+            
+            .detail-content {
+              margin-bottom: 25px;
+              padding-left: 30px;
+              a {
+                text-decoration: none;
+              }
+              @media only screen and (max-width: 768px) {
+                padding: 30px 0;
+              }
+              h2 {
+                font-size:30px;
+                color:#fff;
+                font-weight:400;
+                line-height:38px;
+                padding-bottom:10px;
+                margin:0;
+                text-align: right;
+                font-family: 'IBM Plex Sans', sans-serif;
+                @media only screen and (max-width: 768px) {
+                  text-align: left;
+                }
+              }
+              .tags {
+                padding: 5px 0 15px;
+                span {
+                  font-size:12px;
+                  display: block;
+                  color:#fff;
+                  font-weight:400;
+                  line-height:16px;
+                  margin:10px 0;
+                  text-align: right;
+                  font-family: 'Montserrat', sans-serif;
+                  @media only screen and (max-width: 768px) {
+                    text-align: left;
+                  }
+                }
+              }
+              p {
+                font-size:14px;
+                color:#fff;
+                font-weight:400;
+                line-height:22px;
+                margin:0;
+                text-align: right;
+                font-family: 'Montserrat', sans-serif;
+                @media only screen and (max-width: 768px) {
+                  text-align: left;
+                }
+              }
+              .back {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding: 30px 0;
+                img {
+                  width: 25px;
+                  height: 24px;
+                  transform: rotate(-90deg);
+                  @media only screen and (max-width: 558px) {
+                    width: 20px;
+                    height: 18px;
+                  }
+                }
+                span {
+                  &.__text {
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 400;
+                    line-height: 25px;
+                    margin: 0;
+                    text-align: right;
+                    font-family: 'Montserrat', sans-serif;
+                    margin-left: 15px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    @media only screen and (max-width: 558px) {
+                      font-size: 12px;
+                      line-height: 18px;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .slider-popup {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        background: rgba(0,0,0,0.7);
+        justify-content: center;
+        .close-menu {
+          padding: 40px 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          .close {
+            display:flex;
+            padding: 25px;
+              
+            &.cross {
+              position: absolute;
+              right: 40px;
+              top: 40px;
+              width: 75px;
+              height: 75px;
+              padding: 0;
+      
+              &:hover {
+                opacity: 1;
+              }
+      
+              &:before, &:after {
+                position: absolute;
+                left: 28px;
+                top: -13px;
+                content: ' ';
+                height: 35px;
+                width: 2px;
+                background-color: #fff;
+                opacity: 1;
+              }
+      
+              &:before {
+                transition: all .5s ease-in-out;
+                transform: rotate(-90deg);
+              }
+      
+              &:after {
+                transition: all .5s ease-in-out;
+                transform: rotate(-180deg);
+              }
+              &.active {
+                &:before {
+                  transform: rotate(45deg);
+                }
+        
+                &:after {
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+            span {
+              margin-left: auto;
+              font-size: 21px;
+              position: absolute;
+              z-index: 2;
+              background: #fff;
+              font-size: 18px;
+            }
+          }
+        }
+        .slider-inner {
+          width: 70%;
+          max-width: 1024px;
+          margin: 0 auto;
+          .slick-dots {
+            bottom: 0;
+            margin-bottom: 10px;
+            text-align: left;
+            li {
+              cursor: url(https://aradesign.in/content/common/gray-cursor.png) 10 8, default !important;
+              button {
+                margin-right: 0px;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 16px solid #4d4d4d;
+                transition: all 0.5s ease-in-out;
+                border-radius: 2px;
+                padding: 0;
+                &:hover,  {
+                  border-bottom: 16px solid #fff;
+                }
+                &::before {
+                  width: 0;
+                  color: transparent;
+                }
+              }
+              &.slick-active {
+                button {
+                  border-bottom: 16px solid #fff;
+                }
+              }
+            }
+          } 
+        }
+      }
+    }
+  }

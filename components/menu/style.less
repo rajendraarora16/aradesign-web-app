@@ -1,0 +1,249 @@
+.header-section {
+  .menu {
+    transform: rotate(0deg);
+    transition: all .5s ease-in-out;
+      img {
+        transform: rotate(0deg);
+      }
+    img {
+      transition: all .5s ease-in-out;
+    }
+    &.none {
+      display: none;
+    }
+    
+    &.active {
+      transform: rotate(-180deg);
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+.menu-wrapper {
+    position: fixed;
+    max-width: 280px;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    right: -420px;
+    bottom: 0;
+    top: 0;
+    transition: all .5s ease-in-out;
+    z-index: 99;
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+      right: -100%;
+    }
+    &.show {
+        right: 0;
+    }
+    .close-menu {
+      padding: 40px 0;
+      .close {
+        display:flex;
+        padding: 25px;
+        cursor: url(https://aradesign.in/content/common/gray-cursor.png) 15 13, default;
+        &.cross {
+          position: absolute;
+          right: -5px;
+          top: 40px;
+          width: 75px;
+          height: 75px;
+          padding: 0;
+          @media only screen and (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+            right: 40px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+  
+          &:before, &:after {
+            position: absolute;
+            left: 28px;
+            top: -13px;
+            content: ' ';
+            height: 25px;
+            width: 2px;
+            background-color: #fff;
+            opacity: 1;
+          }
+  
+          &:before {
+            transition: all .5s ease-in-out;
+            transform: rotate(45deg);
+          }
+  
+          &:after {
+            transition: all .5s ease-in-out;
+            transform: rotate(-45deg);
+          }
+          &.active {
+            &:before {
+              transform: rotate(45deg);
+            }
+    
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        span {
+          margin-left: auto;
+          font-size: 21px;
+          position: absolute;
+          z-index: 2;
+          background: #fff;
+          font-size: 18px;
+          cursor: url(https://aradesign.in/content/common/gray-cursor.png) 15 13, default;
+        }
+      }
+    }
+    .close {
+      p {
+        font-size: 14px;
+        color: #fff;
+        line-height: 18px;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+      }
+      &.bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0px;
+          margin-bottom: 0px;
+          padding: 25px 25px 20px;
+          width: 100%;
+          background: #000;
+          .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            span {
+              margin-left: 10px;
+              text-align: right;
+              display: block;
+              color: #fff;
+              font-family: 'IBM Plex Sans', sans-serif;
+              img {
+                width: 25px;
+                height: 25px;
+              }
+            }
+          }
+          .powerd-by {
+            display: block;
+            span {
+              font-size: 10px;
+              color: #fff;
+              line-height: 18px;
+              font-family: 'Montserrat', sans-serif;
+              margin-bottom: 20px;
+              a {
+                text-decoration: none;
+                font-size: 10px;
+                color: #fff;
+                line-height: 18px;
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 20px;
+                span {
+                  img {
+                    margin-left: 10px;
+                    width: 120px;
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+    .nav {
+      padding:30px;
+      height: 85vh;
+      a {
+        text-decoration: none !important;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        //transition: all .5s ease-in-out;
+        -webkit-animation: drop 0.9s;
+        animation: drop 0.9s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        opacity: 1;
+        &:nth-child(2) {
+          -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+        }
+        &:nth-child(3) {
+          -webkit-animation-delay: 0.5s;
+                  animation-delay: 0.5s;
+        }
+        &:nth-child(4) {
+          -webkit-animation-delay: 1s;
+                  animation-delay: 1s;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+        &:hover {
+          .name {
+            color: #bbb;
+          }
+        }
+        span {
+          &.icon {
+            height: auto;
+            margin-right: 15px;
+            cursor: url(https://aradesign.in/content/common/gray-cursor.png) 15 13, default;
+            img {
+              width: 18px !important;
+            }
+          }
+        }
+        .name {
+          font-size:16px;
+          color:#fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          cursor: url(https://aradesign.in/content/common/gray-cursor.png) 15 13, default;
+          &:hover {
+            color: #bbb;
+          }
+        }
+      }
+    }
+}
+
+@-webkit-keyframes drop {
+  from {
+    top: 0px;
+  }
+  70% {
+    top: 165px;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  to {
+    top: 150px;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes drop {
+  from {
+    top: 0px;
+  }
+  70% {
+    top: 165px;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  to {
+    top: 150px;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}

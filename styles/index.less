@@ -1,0 +1,259 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import './common.less';
+
+  .main-container {
+    height: 100vh;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media only screen and (max-width: 768px) {
+      padding: 0 25px;
+    }
+    .super-container {
+      .row {
+        .container {
+          &.home-container {
+            .left-content {
+              position: absolute;
+              bottom: 0;
+              margin-bottom: 25px;
+              left: 0;
+              padding:0 40px;
+              @media only screen and (max-width: 768px) {
+                max-width: 100%;
+                width: 100vw;
+                padding: 20px;
+                position: fixed;
+                margin-bottom: 0px;
+              }
+              .title-text {
+                display: flex; 
+                padding-bottom: 5px;
+                width: 80vw;
+                @media only screen and (max-width: 558px) {
+                  padding-bottom: 10px;
+                }
+                .rw-sentence{
+                  font-size: 42px;
+                  color: #fff;
+                  font-weight: 800;
+                  line-height: 58px;
+                  display: flex;
+                  @media only screen and (max-width: 768px) {
+                    display: block;
+                  }
+                  @media only screen and (max-width: 558px) {
+                    font-size: 40px;
+                    line-height: 47px;
+                  }
+                  @media only screen and (max-width: 375px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                  }
+                }
+                .rw-sentence span{
+                  font-size: 46px;
+                  color: #fff;
+                  font-weight: 800;
+                  line-height: 58px;
+                  font-family: 'Montserrat', sans-serif;
+                  @media only screen and (max-width: 558px) {
+                    font-size: 38px;
+                    line-height: 47px;
+                  }
+                  @media only screen and (max-width: 375px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                  }
+                }
+                .rw-words{
+                  display: inline;
+                  text-indent: 5px;
+                  @media only screen and (max-width: 768px) {
+                    display: block;
+                    text-indent: 0px;
+                  }
+                }
+                .rw-words-1 span{
+                  position: absolute;
+                  opacity: 0;
+                  overflow: hidden;
+                  -webkit-animation: rotateWord 12s linear infinite 0s;
+                  -ms-animation: rotateWord 12s linear infinite 0s;
+                  animation: rotateWord 12s linear infinite 0s;
+                }
+                .rw-words-1 span:nth-child(2) { 
+                    -webkit-animation-delay: 3s; 
+                  -ms-animation-delay: 3s; 
+                  animation-delay: 3s; 
+                }
+                .rw-words-1 span:nth-child(3) { 
+                    -webkit-animation-delay: 6s; 
+                  -ms-animation-delay: 6s; 
+                  animation-delay: 6s;
+                }
+                .rw-words-1 span:nth-child(4) { 
+                    -webkit-animation-delay: 9s; 
+                  -ms-animation-delay: 6s; 
+                  animation-delay: 9s; 
+                }
+                .rw-words-1 span:nth-child(5) { 
+                    -webkit-animation-delay: 12s; 
+                  -ms-animation-delay: 12s; 
+                  animation-delay: 12s; 
+                }
+                @-webkit-keyframes rotateWord {
+                  0% { opacity: 0; }
+                  2% { opacity: 0; -webkit-transform: translateY(30px); }
+                  5% { opacity: 1; -webkit-transform: translateY(0px);}
+                  17% { opacity: 1; -webkit-transform: translateY(0px); }
+                  20% { opacity: 0; -webkit-transform: translateY(-30px); }
+                  80% { opacity: 0; }
+                  100% { opacity: 0; }
+                }
+                @-ms-keyframes rotateWord {
+                    0% { opacity: 0; }
+                    2% { opacity: 0; -ms-transform: translateY(30px); }
+                    5% { opacity: 1; -ms-transform: translateY(0px);}
+                    17% { opacity: 1; -ms-transform: translateY(0px); }
+                    20% { opacity: 0; -ms-transform: translateY(-30px); }
+                    80% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+                @keyframes rotateWord {
+                    0% { opacity: 0; }
+                    2% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+                    5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+                    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+                    20% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+                    80% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+                @media screen and (max-width: 768px){
+                  .rw-sentence { font-size: 24px; line-height: 32px }
+                }
+                @media screen and (max-width: 320px){
+                  .rw-sentence { font-size: 18px; line-height: 28px; }
+                }
+              }
+              
+              p {
+                font-size: 16px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 32px;
+                margin: 0;
+                width: 665px;
+                padding: 20px 0 0;
+                font-family: 'Montserrat', sans-serif;
+                @media only screen and (max-width: 768px) {
+                  margin-top: 75px;
+                }
+                @media only screen and (max-width: 558px) {
+                  font-size: 14px;
+                  line-height: 18px;
+                  padding: 20px 0;
+                  width: 100%;
+                }
+              }
+              h4 {
+                font-size:21px;
+                color:#fff;
+                font-weight:700;
+                line-height:24px;
+                padding:20px 0 0;
+                margin:0;
+                font-family: 'IBM Plex Sans', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size:16px;
+                }
+              }
+            }
+            .column-right {
+              .right-wrapper {
+                position: absolute;
+                right: 0;
+                margin-right: 40px;
+                bottom: 0;
+                margin-bottom: 10px;
+                @media only screen and (max-width: 768px) {
+                  display: none;
+                }
+                .right-section {
+                  padding: 20px 0;
+                  .icon-con {
+                    display: flex;
+                    justify-content: flex-end;
+                    img {
+                      width: 35px;
+                      height: 35px;
+                    }
+                  }
+                  .text-section {
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 400;
+                    line-height:18px;
+                    margin: 0;
+                    text-align: right;
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 10px 0;
+                    text-transform: lowercase;
+                  }
+                  .counter-section {
+                    font-size:18px;
+                    color:#fff;
+                    font-weight:400;
+                    line-height:18px;
+                    margin:0;
+                    text-align: right;
+                    font-family: 'IBM Plex Sans', sans-serif;
+                  } 
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .screen__video {
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+      position: absolute;
+      z-index: 1;
+      opacity: 1;
+    }
+  }
+@keyframes move {
+  0%  { top: 0px; }
+  20% { top: -32px; }
+  40% { top: -64px; }
+  60% { top: -96px; }
+  80% { top: -128px; }
+}

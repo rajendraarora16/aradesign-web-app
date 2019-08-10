@@ -1,0 +1,135 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import './common.less';
+
+  .main-container {
+    height: 100vh;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    .row {
+      width: 100%;
+      .container {
+        width: 100%;
+  
+        .grid {
+          display: flex;
+          .column {
+            &.column-right {
+              margin-left: auto;
+              .menu {
+                img {
+                  width: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .super-container {
+      .row {
+        .container {
+          &.project-container {
+            width: 100%;
+            .left-content {
+              max-width: 250px;
+              position: absolute;
+              bottom: 0;
+              margin-bottom: 25px;
+              left: 0;
+            }
+            .grid {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0 -19px;
+              .column {
+                width: 25%;
+                padding: 15px 19px;
+                @media only screen and (max-width: 768px) {
+                  width: 50%;
+                }
+                @media only screen and (max-width: 558px) {
+                  width: 100%;
+                }
+                a {
+                  text-decoration: none;
+                }
+                .project-list {
+                  position: relative;
+                  -webkit-transition: all 2s ease 0s;
+                  transition: all 2s ease 0s;
+                  .gray-img {
+                    .image-wrapper {
+                    }
+                  }
+                  &:hover {
+                    .project-slider,
+                    .project-overlay {
+                      opacity: 1;
+                    }
+                  }
+                  .project-slider {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    -webkit-transition: all 2s ease 0s;
+                    transition: all 2s ease 0s;
+                    .sliderWrapper {
+                      max-width: 484px;
+                      @media only screen and (max-width: 768px) {
+                        max-width: auto;
+                      }
+                      img {
+                        max-width: 484px;
+                        @media only screen and (max-width: 768px) {
+                          max-width: auto;
+                        }
+                      }
+                    }
+                  }
+                  .project-overlay {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    opacity: 0;
+                    -webkit-transition: all 2s ease 0s;
+                    transition: all 2s ease 0s;
+                    .details-section {
+                      padding: 10px 0;
+                      h2 {
+                        font-size: 16px;
+                        color: #fff;
+                        font-weight: 400;
+                        line-height: 21px;
+                        margin: 0;
+                        text-align: center;
+                        font-family: 'IBM Plex Sans', sans-serif;
+                        @media only screen and (max-width: 768px) {
+                          font-size: 14px;
+                          line-height: 16px;
+                        }
+                      }
+                    }
+                  }
+                }
+  
+                .image-wrapper {
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

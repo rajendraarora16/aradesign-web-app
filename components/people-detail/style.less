@@ -1,0 +1,204 @@
+  .main-container {
+    height:100vh;
+    position: relative;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 15px;
+    .row {
+      width:100%;
+      .container {
+        width:100%;
+        
+        .grid {
+          display: flex;
+          .column {
+              &.text-content {
+                display: flex;
+                align-items: flex-end;
+              }
+            &.column-right {
+              margin-left:auto;
+              .menu {
+                img {
+                  width:25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .super-container {
+      &.people-details {
+        .people-row {
+          width: 100%;
+          display: table;
+          margin: 0;
+          max-width: none;
+          height: 80vh;
+          display: flex;
+          align-items: center;
+          @media only screen and (max-width: 768px) {
+            height: 100%;
+          }
+          
+        }
+      }
+      .row {
+        .container {
+          &.people-container {
+            position: relative;
+            .scroll-text {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              margin-bottom: -25px;
+              font-size: 18px;
+              color: #fff;
+              font-weight: 400;
+              line-height: 28px;
+              @media only screen and (max-width: 768px) {
+                display: none;
+              }
+            }
+              .container-arrow__arrow {
+                pointer-events: none;
+                overflow: hidden;
+                position: absolute;
+                right: auto;
+                bottom: 0;
+                height: 50px;
+                z-index: 2;
+                width: 100%;
+                margin-bottom: -70px;
+                @media only screen and (max-width: 768px) {
+                  display: none;
+                }
+                &::before {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  margin-right: 15px;
+                  width: 13px;
+                  height: 78px;
+                  background-repeat: no-repeat;
+                  background: url(https://aradesign.in/content/common/scroll.png);
+                  -webkit-animation: screen-arrow 1.9s infinite ease;
+                  animation: screen-arrow 1.9s infinite ease
+                }
+              }
+              .grid {
+                  @media only screen and (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                  }
+                  .column-right {
+                    width: 65%;
+                    @media only screen and (max-width: 768px) {
+                      width: 100%;
+                    }
+                    .slider-section {
+                      .slick-dots {
+                        bottom: 0;
+                        margin-bottom: 10px;
+                        text-align: left;
+                        li {
+                          button {
+                            margin-right: 0px;
+                            width: 0;
+                            height: 0;
+                            border-left: 8px solid transparent;
+                            border-right: 8px solid transparent;
+                            border-bottom: 16px solid #4d4d4d;
+                            transition: all 0.5s ease-in-out;
+                            border-radius: 2px;
+                            padding: 0;
+                            &:hover,  {
+                              border-bottom: 16px solid #fff;
+                            }
+                            &::before {
+                              width: 0;
+                              color: transparent;
+                            }
+                          }
+                          &.slick-active {
+                            button {
+                              border-bottom: 16px solid #fff;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    img {
+                      width: 100%;
+                    }
+                  }
+              }
+            .left-content {
+              margin-bottom: 25px;
+              padding-right: 25px;
+              position: static !important;
+                @media only screen and (max-width: 768px) {
+                    padding:30px 0;
+                }
+              h2 {
+                font-size: 38px;
+                color: #fff;
+                font-weight: 800;
+                line-height: 52px;
+                font-family: 'Montserrat', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size: 38px;
+                  line-height: 37px;
+                }
+                @media only screen and (max-width: 375px) {
+                  font-size: 32px;
+                  line-height: 37px;
+                }
+              }
+              p {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 28px;
+                margin: 0;
+                padding: 20px 0 0;
+                font-family: 'Montserrat', sans-serif;
+                @media only screen and (max-width: 558px) {
+                  font-size: 14px;
+                  line-height: 18px;
+                  padding: 20px 0;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @-webkit-keyframes screen-arrow {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+
+    100% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%)
+    }
+}
+
+@keyframes screen-arrow {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+
+    100% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%)
+    }
+}
